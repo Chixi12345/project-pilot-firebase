@@ -1,0 +1,111 @@
+.onBoard_oneImgGen img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.onBoard_oneImgGen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.onBoard_onenavImg {
+  margin-top: 40px;
+}
+
+.onBoard_headText {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.onBoard_subText_ {
+  color: rgba(255, 255, 255, 0.87);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.onBoard_bottombtnFam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.onBoard_bottombtn_back {
+  background: transparent;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out 0s;
+  outline: none;
+  border: none;
+}
+
+.onBoard_bottombtn_back:hover {
+  transform: scale(1.05);
+}
+
+.onBoard_bottombtn_next {
+  /* width: 80px;
+  height: 38px; */
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  background: #8875ff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+
+  transition: 0.3s ease-in-out 0s;
+}
+
+.onBoard_bottombtn_next:hover {
+  transform: scale(1.05);
+}
+.onBoard_oneskip_btn {
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out 0s;
+}
+
+.onBoard_oneskip_btn:hover {
+  transform: scale(1.05);
+}
