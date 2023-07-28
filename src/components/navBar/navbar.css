@@ -1,0 +1,151 @@
+.navbar_genFam {
+  width: 100%;
+  /* padding-left: -20px; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #363636;
+  box-sizing: border-box;
+
+  /* height: 48px; */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar_IndexGenFam {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar_focusGenFam {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar_focusFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navBar_indexFlexImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+}
+
+.navBar_indexFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navBar_taskFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navBar_taskFlexImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+}
+.navBar_focusFlexImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+}
+
+.navBar_profileFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navBar_profileFlexImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+}
+
+.navBar_indexFlexText {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.navBar_indexFlexText_active {
+  color: #8687e7;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.navBar_taskFlexText {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.navBar_focusFlexText {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.navBar_profileFlexText {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.addTaskBtn_gen {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #8687e7;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+}

@@ -10,11 +10,14 @@ import {
   CalendarScreenPage,
   FocusModePage,
   HomeScreenPage,
+  IndexScreenPage,
   IntroPage,
   LoginScreenPage,
   OnBoardingPage,
   ProfileScreenPage,
+  RegisterScreenPage,
   SignUpScreenPage,
+  StartsScreenPage,
   TaskScreenPage,
 } from "./pages";
 
@@ -28,6 +31,11 @@ const RoutesE = () => {
     {
       path: "/intropage",
       element: <IntroPage />,
+    },
+
+    {
+      path: "/startspage",
+      element: <StartsScreenPage />,
     },
 
     {
@@ -58,6 +66,16 @@ const RoutesE = () => {
     {
       path: "/focusmode",
       element: <FocusModePage />,
+    },
+
+    {
+      path: "/register",
+      element: <RegisterScreenPage />,
+    },
+
+    {
+      path: "/index",
+      element: <IndexScreenPage />,
     },
 
     {

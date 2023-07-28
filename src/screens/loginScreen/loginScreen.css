@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e8e8e8;
+  overflow-x: hidden;
+}
+.totalOnLoginScreen_gen {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  /* overflow-x: hidden; */
+}
+
+.loginScreen_containertt {
+  background: #121212;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.loginScreen_goBack {
+}
+
+.loginScreen_loginText {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.loginScreen_form {
+  margin-top: 20px;
+}
+
+.loginScreen_username_ {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+
+.loginScreen_usernametext {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.loginScreen_username_ input {
+  height: 48px;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+  border: 0.8px solid #979797;
+  background: #1d1d1d;
+
+  color: #fff;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.loginScreen_username_ input::placeholder {
+  color: #535353;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.loginScreen_passwordtext {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.loginScreen_password_ {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.loginScreen_password_ input {
+  height: 48px;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+  border: 0.8px solid #979797;
+  background: #1d1d1d;
+
+  color: #fff;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.loginScreen_password_ input::placeholder {
+  color: #535353;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.loginScreen_login_btn {
+  width: 100%;
+  height: 48px;
+
+  border-radius: 4px;
+  background: #8687e7;
+
+  color: #fff;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  margin-top: 50px;
+}
+
+.loginScreen_breakGen {
+  width: 100%;
+  border-top: 1px solid #979797;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.loginScreen_break_sub {
+  background-color: #121212;
+
+  color: #979797;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -12px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_withGoogleFam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #8875ff;
+  width: 100%;
+  height: 48px;
+  margin-top: 40px;
+}
+
+.login_withGoogleImg {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: px; */
+}
+
+.login_withGoogle_text {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.loginScreen_registerFam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.loginScreen_registerText {
+  color: #979797;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.loginScreen_registerBtnn {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1400px) {
+  .totalOnLoginScreen_gen {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .totalOnLoginScreen_gen {
+    max-width: 100%;
+  }
+}
