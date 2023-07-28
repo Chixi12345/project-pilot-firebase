@@ -13,10 +13,13 @@ const OnBoardTab = ({
   nextBtnText,
   handleTabBack,
   handleTabNext,
+  handleStartScreen,
 }) => {
   return (
     <div>
-      <button className="onBoard_oneskip_btn">SKIP</button>
+      <button onClick={handleStartScreen} className="onBoard_oneskip_btn">
+        SKIP
+      </button>
 
       <div className="onBoard_oneImgGen">
         <div className="onBoard_oneImg">

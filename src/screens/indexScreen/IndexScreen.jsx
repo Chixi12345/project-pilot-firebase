@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import "./profileScreen.css";
-import Navbar from "../../components/navBar/Navbar";
-import Header from "../../components/header/Header";
-
+import "./indexScreen.css";
+import sortindex from "../../assets/icons/sortindex.svg";
 import indexMainImg from "../../assets/icons/indexMainImg.svg";
 import addTag from "../../assets/icons/addTag.svg";
 
@@ -10,7 +8,10 @@ import addTime from "../../assets/icons/addTime.svg";
 
 import send from "../../assets/icons/send.svg";
 
-const ProfileScreen = () => {
+import Navbar from "../../components/navBar/Navbar";
+import Header from "../../components/header/Header";
+
+const IndexScreen = () => {
   const [showModal, setShowModal] = useState(false);
   const [showTag, setShowTag] = useState(false);
 
@@ -55,9 +56,22 @@ const ProfileScreen = () => {
     // console.log("child clicked");
   };
   return (
-    <div className="totalOnprofileScreen_gen">
-      <div className="indexProfile_containertt">
+    <div className="totalOnIndexScreen_gen">
+      <div className="indexScreen_containertt">
         <Header />
+
+        <div className="index_welcomeFamily">
+          <div className="index_welcomeImg">
+            <img src={indexMainImg} />
+          </div>
+
+          <div className="index_welcomeHead_text">
+            What do you want to do today?
+          </div>
+          <div className="index_welcomeSub_text">Tap + to add your tasks</div>
+        </div>
+
+        <Navbar openShowModal={openShowModal} />
 
         {showModal && (
           <div onClick={closeShowModal} className="indexModalGenn_container">
@@ -148,10 +162,9 @@ const ProfileScreen = () => {
             </div>
           </div>
         )}
-        <Navbar openShowModal={openShowModal} />
       </div>
     </div>
   );
 };
 
-export default ProfileScreen;
+export default IndexScreen;

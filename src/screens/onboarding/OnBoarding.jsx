@@ -9,9 +9,16 @@ import navShowOne from "../../assets/icons/navShowOne.svg";
 import navShowTwo from "../../assets/icons/navShowTwo.svg";
 import navShowThree from "../../assets/icons/navShowThree.svg";
 
+import { useNavigate } from "react-router-dom";
+
 const OnBoarding = () => {
+  const navigate = useNavigate();
+
   const [tab, setTab] = useState(1);
 
+  const handleStartScreen = () => {
+    navigate("/startspage");
+  };
   const handleTabOne = () => {
     setTab(1);
   };
@@ -35,6 +42,7 @@ const OnBoarding = () => {
             nextBtnText="Next"
             handleTabNext={handleTabTwo}
             handleTabBack={handleTabOne}
+            handleStartScreen={handleStartScreen}
           />
         )}
         {tab === 2 && (
@@ -47,6 +55,7 @@ const OnBoarding = () => {
             nextBtnText="Next"
             handleTabNext={handleTabThree}
             handleTabBack={handleTabOne}
+            handleStartScreen={handleStartScreen}
           />
         )}
         {tab === 3 && (
@@ -57,8 +66,9 @@ const OnBoarding = () => {
             onBoardSub="You can organize your daily tasks by adding your tasks into separate categories"
             backBtntext="Back"
             nextBtnText="Get Started"
-            handleTabNext={handleTabThree}
+            handleTabNext={handleStartScreen}
             handleTabBack={handleTabTwo}
+            handleStartScreen={handleStartScreen}
           />
         )}
       </div>
