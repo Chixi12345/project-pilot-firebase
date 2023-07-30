@@ -1,8 +1,8 @@
 .navbar_genFam {
-  width: 100%;
+  width: 500px;
   /* padding-left: -20px; */
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: -50px;
   left: 0;
   background: #363636;
   box-sizing: border-box;
@@ -12,6 +12,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .navBar_IndexGenFam {
@@ -148,4 +152,10 @@
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar_genFam {
+    width: 100%;
+  }
 }

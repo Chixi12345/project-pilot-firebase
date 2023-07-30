@@ -254,7 +254,33 @@ body {
   z-index: 9999;
 }
 
+.Indexmodal-container_calender {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 500px;
+  height: 100%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
 .Indexmodal-content {
+  position: relative;
+  width: 60%;
+  border-radius: 10px;
+  background: #363636;
+  padding: 20px;
+  /* border-radius: 8px; */
+  animation: slide-in 0.3s ease-in-out;
+}
+
+.Indexmodal-content_calender {
   position: relative;
   width: 60%;
   border-radius: 10px;
@@ -377,6 +403,14 @@ body {
   }
 
   .Indexmodal-container {
+    width: 100%;
+  }
+
+  .Indexmodal-container_calender {
+    width: 100%;
+  }
+
+  .indexModalGenn_container {
     width: 100%;
   }
 }

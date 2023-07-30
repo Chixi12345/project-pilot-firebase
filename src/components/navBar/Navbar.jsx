@@ -11,7 +11,7 @@ import profileHome from "../../assets/icons/profileHome.svg";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Navbar = ({ openShowModal }) => {
+const Navbar = ({ openShowModal, openShowCalender }) => {
   const location = useLocation();
 
   const { pathname } = location;
