@@ -3,6 +3,8 @@ import "./profileScreen.css";
 import Navbar from "../../components/navBar/Navbar";
 import Header from "../../components/header/Header";
 
+import "../../components/calendarStyle/CalendarStyle.css";
+
 import indexMainImg from "../../assets/icons/indexMainImg.svg";
 import addTag from "../../assets/icons/addTag.svg";
 
@@ -10,11 +12,16 @@ import addTime from "../../assets/icons/addTime.svg";
 
 import send from "../../assets/icons/send.svg";
 
+import Calendar from "react-calendar";
+
 const ProfileScreen = () => {
   const [showModal, setShowModal] = useState(false);
   const [showTag, setShowTag] = useState(false);
 
   const [priorTag, setPriorTag] = useState(0);
+
+  const [showCalender, setShowCalender] = useState(false);
+  const [date, setDate] = useState(new Date());
 
   const handleHighPrior = () => {
     setPriorTag(1);
@@ -48,6 +55,13 @@ const ProfileScreen = () => {
     setShowTag(!showTag);
   };
 
+  const openShowCalender = () => {
+    setShowCalender(true);
+  };
+
+  const closeShowCalender = () => {
+    setShowCalender(false);
+  };
   const handleChildClick = (event) => {
     // 👇️ stop event propagation (won't trigger parent's onClick)
     event.stopPropagation();
@@ -57,7 +71,7 @@ const ProfileScreen = () => {
   return (
     <div className="totalOnprofileScreen_gen">
       <div className="indexProfile_containertt">
-        <Header />
+        <Header headerName="Profile" />
 
         {showModal && (
           <div onClick={closeShowModal} className="indexModalGenn_container">
@@ -86,7 +100,10 @@ const ProfileScreen = () => {
                     <img src={addTag} />
                   </div>
 
-                  <div className="modalAdd_bottomFamTimeImg">
+                  <div
+                    onClick={openShowCalender}
+                    className="modalAdd_bottomFamTimeImg"
+                  >
                     <img src={addTime} />
                   </div>
                 </div>
@@ -145,6 +162,33 @@ const ProfileScreen = () => {
                 </button>
                 <button className="index_taskSavebtn">Save</button>
               </div>
+            </div>
+          </div>
+        )}
+
+        {showCalender && (
+          <div className="Indexmodal-container_calender">
+            <div className="Indexmodal-content_calender">
+              <Calendar
+                style={{ background: "#000" }}
+                onChange={setDate}
+                value={date}
+              />
+
+              <div className="index_taskBtnFam">
+                <button
+                  onClick={closeShowCalender}
+                  className="index_taskCancelbtn"
+                >
+                  Cancel
+                </button>
+                <button className="index_taskSavebtn">Save</button>
+              </div>
+
+              {/* <p className="text-center">
+                <span className="bold">Selected Date:</span>{" "}
+                {date.toDateString()}
+              </p> */}
             </div>
           </div>
         )}
