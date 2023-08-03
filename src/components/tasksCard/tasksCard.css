@@ -33,7 +33,7 @@ padding-bottom: 20px; */
 }
 
 .taskCard_date {
-  color: var(--gray, #afafaf);
+  color: #afafaf;
   font-family: Lato;
   font-size: 14px;
   font-style: normal;

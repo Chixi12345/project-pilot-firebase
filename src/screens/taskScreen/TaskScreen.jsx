@@ -8,6 +8,8 @@ import "../../components/calendarStyle/CalendarStyle.css";
 import indexMainImg from "../../assets/icons/indexMainImg.svg";
 import addTag from "../../assets/icons/addTag.svg";
 
+import editpen from "../../assets/icons/editpen.svg";
+
 import searchIcon from "../../assets/icons/searchIcon.svg";
 
 import addTime from "../../assets/icons/addTime.svg";
@@ -16,6 +18,12 @@ import send from "../../assets/icons/send.svg";
 
 import Calendar from "react-calendar";
 import TasksCard from "../../components/tasksCard/TasksCard";
+import EdittaskEach from "../../components/editTaskEach/EdittaskEach";
+import tasktimer from "../../assets/icons/tasktimer.svg";
+import taskflag from "../../assets/icons/taskflag.svg";
+import tasktag from "../../assets/icons/tasktag.svg";
+
+import tasktrash from "../../assets/icons/tasktrash.svg";
 
 const TaskScreen = () => {
   const [showModal, setShowModal] = useState(false);
@@ -24,6 +32,10 @@ const TaskScreen = () => {
   const [priorTag, setPriorTag] = useState(0);
   const [showCalender, setShowCalender] = useState(false);
   const [date, setDate] = useState(new Date());
+  const [completed, setCompleted] = useState(false);
+
+  const [showEditTask, setShowEditTask] = useState(false);
+  const [editTaskData, setEditTaskData] = useState({});
 
   const [tasks, setTasks] = useState([
     {
@@ -31,6 +43,7 @@ const TaskScreen = () => {
       taskDescription: "Do chapter 2 to 5 for next week",
       taskDate: "Tues Aug 01 2023",
       taskPriority: "High",
+      completed: false,
     },
 
     {
@@ -38,6 +51,7 @@ const TaskScreen = () => {
       taskDescription: "Do chapter 2 to 5 for next week",
       taskDate: "Tues Aug 01 2023",
       taskPriority: "Medium",
+      completed: false,
     },
 
     {
@@ -45,6 +59,7 @@ const TaskScreen = () => {
       taskDescription: "Do chapter 2 to 5 for next week",
       taskDate: "Tues Aug 01 2023",
       taskPriority: "High",
+      completed: false,
     },
 
     {
@@ -52,6 +67,7 @@ const TaskScreen = () => {
       taskDescription: "Do chapter 2 to 5 for next week",
       taskDate: "Tues Aug 01 2023",
       taskPriority: "Low",
+      completed: false,
     },
 
     {
@@ -59,6 +75,7 @@ const TaskScreen = () => {
       taskDescription: "Do chapter 2 to 5 for next week",
       taskDate: "Tues Aug 01 2023",
       taskPriority: "Medium",
+      completed: false,
     },
   ]);
 
@@ -101,6 +118,14 @@ const TaskScreen = () => {
   const closeShowCalender = () => {
     setShowCalender(false);
   };
+
+  const handleOpenEditTask = () => {
+    setShowEditTask(true);
+  };
+
+  const handleCloseEditTask = () => {
+    setShowEditTask(false);
+  };
   const handleChildClick = (event) => {
     // 👇️ stop event propagation (won't trigger parent's onClick)
     event.stopPropagation();
@@ -129,12 +154,21 @@ const TaskScreen = () => {
           {tasks.length >= 1 ? (
             <div>
               {tasks.map((task) => (
-                <TasksCard
-                  taskHeader={task.taskHeader}
-                  taskDescription={task.taskDescription}
-                  taskDate={task.taskDate}
-                  taskPriority={task.taskPriority}
-                />
+                <div
+                  onClick={() => {
+                    handleOpenEditTask();
+                    setEditTaskData(task);
+                  }}
+                  style={{ width: "100%" }}
+                >
+                  <TasksCard
+                    taskHeader={task.taskHeader}
+                    taskDescription={task.taskDescription}
+                    taskDate={task.taskDate}
+                    taskPriority={task.taskPriority}
+                    task={task}
+                  />
+                </div>
               ))}
             </div>
           ) : (
@@ -261,6 +295,75 @@ const TaskScreen = () => {
             </div>
           </div>
         )}
+
+        {showEditTask && (
+          <div
+            onClick={handleCloseEditTask}
+            className="indexModalGenn_container_editTask"
+          >
+            <div
+              style={{ height: showModal ? "fit-content" : "-2%" }}
+              onClick={handleChildClick}
+              className="indexModalGenn_editTask"
+            >
+              <div
+                onClick={handleCloseEditTask}
+                className="inputCancel_editgen"
+              >
+                {" "}
+                X
+              </div>
+
+              <div className="edit_inputGenFam_cont">
+                <div className="edit_inputGen_firstFlex">
+                  <div className="edit_inputGen_Box"></div>
+
+                  <div className="edit_input_textGen">
+                    <div className="edit_input_mainOne">
+                      {editTaskData.taskHeader}
+                    </div>
+                    <div className="edit_input_mainTwo">
+                      {editTaskData.taskDescription}
+                    </div>
+                  </div>
+                </div>
+                <div className="edit_input_imggg">
+                  <img src={editpen} />
+                </div>
+              </div>
+
+              <EdittaskEach
+                taskIcon={tasktimer}
+                taskName="Task Date "
+                taskOpt={editTaskData.taskDate}
+              />
+              <EdittaskEach
+                taskIcon={taskflag}
+                taskName="Task Priority "
+                taskOpt={editTaskData.taskPriority}
+              />
+
+              <EdittaskEach
+                taskIcon={tasktag}
+                taskName="Task Status "
+                taskOpt={
+                  editTaskData.completed === true ? "Completed" : "Incompleted"
+                }
+              />
+
+              <div className="task_deletegen_fam">
+                <div className="task_icon_delete">
+                  <img src={tasktrash} />
+                </div>
+                <div className="task_text_deleteText">Delete Task</div>
+              </div>
+              {/* <EdittaskEach taskIcon={tasktrash} taskName={} taskOpt={} /> */}
+
+              <div className="task_text_edit_task_____">Edit Task </div>
+            </div>
+          </div>
+        )}
+
         <Navbar openShowModal={openShowModal} />
       </div>
     </div>

@@ -34,7 +34,7 @@ const FocusMode = () => {
     start,
     pause,
     reset,
-  } = useStopwatch({ autoStart: true });
+  } = useStopwatch({ autoStart: false });
 
   const handleHighPrior = () => {
     setPriorTag(1);
@@ -117,6 +117,13 @@ const FocusMode = () => {
             </div>
           </div>
 
+          <div className="focus_statusGen_body">
+            <div
+              style={{ background: isRunning ? "green" : "red" }}
+              className="focus_stopwatchStatus_color"
+            ></div>
+            <div className="focus_status_text">Status</div>
+          </div>
           <div className="focus_stopwatch_runIndicate">
             {isRunning ? "Running" : "Not running"}
           </div>
