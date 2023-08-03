@@ -22,6 +22,29 @@ body {
   position: relative;
 }
 
+.focus_stopwatchStatus_color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.focus_statusGen_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.focus_status_text {
+  color: #fff;
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 1400px) {
   .totalOnFocusScreen_gen {
     max-width: 500px;

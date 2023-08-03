@@ -93,6 +93,122 @@ body {
   font-weight: 400;
 }
 
+.indexModalGenn_container_editTask {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 500px;
+  height: 100%;
+
+  /* height: 0%; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  transition: 0.7s ease-in-out 0s;
+}
+
+.indexModalGenn_editTask {
+  border-radius: 18px 18px 0px 0px;
+  background: #121212;
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 999;
+
+  transition: 0.7s ease-in-out 0s;
+}
+
+.edit_inputGenFam_cont {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.edit_inputGen_firstFlex {
+  display: flex;
+  align-items: flex-start;
+}
+
+.inputCancel_editgen {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+
+  color: #fff;
+  background: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.edit_inputGen_Box {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  background: #363636;
+  margin-right: 30px;
+}
+
+.edit_input_mainOne {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.edit_input_mainTwo {
+  color: #afafaf;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  margin-top: 15px;
+}
+
+.task_deletegen_fam {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.task_icon_delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.task_text_deleteText {
+  color: #ff4949;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.task_text_edit_task_____ {
+  text-align: center;
+  color: #fff;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  margin-top: 100px;
+}
 @media only screen and (max-width: 1400px) {
   .totalOntaskScreen_gen {
     max-width: 500px;
@@ -104,5 +220,9 @@ body {
 @media only screen and (max-width: 600px) {
   .totalOntaskScreen_gen {
     max-width: 100%;
+  }
+
+  .indexModalGenn_container_editTask {
+    width: 100%;
   }
 }

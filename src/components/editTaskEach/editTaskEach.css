@@ -1,0 +1,37 @@
+.editTask_genFam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.editTask_famFlex {
+  display: flex;
+  align-items: center;
+}
+
+.editTask_Imggg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.editTask_text {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.editTask_textDateee {
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Lato;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.21);
+  padding: 12px 18px;
+}
